@@ -54,9 +54,11 @@ Supongamos que tengo los archivos asm.asm, c.c y el programa compilado (binario)
         * `x/1uw dir` lee 1 int de 32 bits SIN SIGNO (u = unsigned decimal)
         * donde dir es alguna dirección de memoria (puede ser una etiqueta o algún puntero que tengo en un registro...)
 
-* En cualquier momento, podemos salir con quit, o reiniciar la ejecución del código volviendo a correr `r` (run). También se puede hacer `make` desde dentro de gdb y volver a correr el ejecutable con `r`, y se cargará el binario nuevo. Útil para mantener los breakpoints preestablecidos luego de una corrección chica. (fuente: https://www.cse.unsw.edu.au/~learn/debugging/modules/gdb_conditional_breakpoints/)
+* En cualquier momento podemos salir con quit, o reiniciar la ejecución del código volviendo a correr `r` (run). También se puede hacer `make` desde dentro de gdb y volver a correr el ejecutable con `r`, y se cargará el binario nuevo. Útil para mantener los breakpoints preestablecidos luego de una corrección chica. 
+
 
 ### Manejo de breakpoints
+Fuente: https://www.cse.unsw.edu.au/~learn/debugging/modules/gdb_conditional_breakpoints/
 
 * `b` (o `break`) por si solo solo crea un breakpoint en la línea actual.
 * `b asm.asm:27` crea un breakpoint en la línea 27 del archivo asm.asm (podría ser en un archivo de c también).
