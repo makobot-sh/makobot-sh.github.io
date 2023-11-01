@@ -88,20 +88,19 @@ $1 = {
 ```
 ### Revisando el estado del programa
 Proveemos varios comandos extra para imprimir el estado del programa en GDB durante los talleres de system programming (pueden verlos definidos en los archivos `orga2.py` de los talleres):
-* `info gdt`: shows the currently loaded GDT
-    * `info gdt` -- Show descriptors present
-    * `info gdt all` -- Show all descriptors
-    * `info gdt [idx]` -- Show the i-th descriptor
-* `info idt`: shows the currently loaded IDT
-    * `info idt` -- Show descriptors present
-    * `info idt all` -- Show all descriptors
-    * `info idt [idx]` -- Show the i-th descriptor
-* `info page`: Shows paging information
-    * `info page` -- Show a summary of the paging configuration
-    * `info page directory` -- Shows present entries in the page directory
-    * `info page table [idx]` -- Shows present entries for the given page table
-    * `info page [addr]` -- Shows paging information for the given virtual address
-* `xp`: Shows present entries for the given page table
+* `info gdt`: muestra la GDT cargada actualmente
+    * `info gdt` -- Muestra los descriptores presentes
+    * `info gdt all` -- Muestra todos los descriptores
+    * `info gdt [idx]` -- Muestra el i-ésimo descriptor
+* `info idt`: Muestra la IDT cargada actualmente
+    * `info idt` -- Muestra los descriptores presentes
+    * `info idt all` -- Muestra todos los descriptores
+    * `info idt [idx]` -- Muestra el i-ésimo descriptor
+* `info page`: Muestra información de paginación
+    * `info page` -- Muestra un resumen de la configuración de paginación
+    * `info page directory` -- Muestra las entradas presentes en el page directory
+    * `info page table [idx]` -- Muestra las entradas presentes en la page table dada
+    * `info page [addr]` -- Muestra información de paginación para la dirección virtual dada
 
 
 ### Terminando o reiniciando la ejecución
