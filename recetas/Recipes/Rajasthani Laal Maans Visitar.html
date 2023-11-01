@@ -105,26 +105,29 @@
 
         <!-- Image -->
         <div class="photobox">
-            <a href="#">
-                <img src="Images/036A5BC8-6AB2-44A4-8ACB-D47E4370CBC9/A2F4707F-AE1D-437F-AAFE-61D8E018A9D9.jpg" itemprop="image" class="photo photoswipe"/>
+            <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9ihaNhruq9aBE0eRcsEl0eeA1jeaOo_X9cQ&usqp=CAU">
+                <img src="Images/B1FA56E9-41B7-45D4-8A42-5791B1FF1BE8/D364E30E-CDE7-4593-8EE9-F656B23EAB8B.jpg" itemprop="image" class="photo photoswipe"/>
             </a>
                     </div>
 
         <!-- Name -->
-        <h1 itemprop="name" class="name">Hummus Rico De Palo Sin Tahini</h1>
+        <h1 itemprop="name" class="name">Rajasthani Laal Maans Visitar</h1>
         
         <!-- Info -->
         
         <!-- Rating, categories -->
-        <p itemprop="aggregateRating" class="rating" value="4">&#9733;&#9733;&#9733;&#9733;</p>
-            <p itemprop="recipeCategory" class="categories">Macl&#225;sicos</p>
+        <p itemprop="aggregateRating" class="rating" value="0"></p>
         
         <p class="metadata">
         
             <!-- Cook time, prep time, servings, difficulty -->
 
             <!-- Source -->
-
+                <b>Fuente: </b>
+                    <a itemprop="url" href="https://www.google.com/search?q=rajasthani+laal+maas&amp;sca_esv=576780426&amp;tbm=isch&amp;prmd=ivn&amp;source=lnms&amp;sa=X&amp;ved=2ahUKEwiP_IXp55OCAxUIErkGHaBzAcIQ_AUoAXoECAIQAQ&amp;biw=360&amp;bih=317&amp;dpr=3#imgrc=sD6Mu_VeVz2f5M">
+                        <span itemprop="author">Google.com</span>
+                    </a>
+                            
         </p>
         
         <div class="clear"></div>
@@ -137,7 +140,7 @@
         <div class="ingredientsbox">
             <h3 class="subhead">Ingredientes</h3>
             <div class="ingredients text">
-                <p class="line" itemprop="recipeIngredient"><strong>Hummus rico de palo sin tahini:</strong></p><p class="line" itemprop="recipeIngredient">- pimentón 1 cdta copetona</p><p class="line" itemprop="recipeIngredient">- ajo en polvo 1/2 cdta generosita</p><p class="line" itemprop="recipeIngredient">- curry 1/4 cdta (ojo c la cantidad, esta vez me pase pero quedo bien)</p><p class="line" itemprop="recipeIngredient">- pimienta cayena pizca generosa</p><p class="line" itemprop="recipeIngredient">- comino 2 pizcas</p><p class="line" itemprop="recipeIngredient">- 2 limones (1 mediano 1 chico)</p><p class="line" itemprop="recipeIngredient">- aceite de oliva generoso</p>
+                <p class="line" itemprop="recipeIngredient"><strong>10</strong> Kashmiri dry red chillies , soaked in water for atleast 20 minutes</p><p class="line" itemprop="recipeIngredient"><strong>500</strong> grams Mutton , cut into 1 inch pieces</p><p class="line" itemprop="recipeIngredient"><strong>1/2</strong> cup Curd (Dahi / Yogurt)</p><p class="line" itemprop="recipeIngredient"><strong>1</strong> teaspoon Cumin seeds (Jeera)</p><p class="line" itemprop="recipeIngredient"><strong>2</strong> teaspoons Cumin powder (Jeera)</p>
             </div>
         </div>
         
@@ -164,87 +167,6 @@
 
 </div>
 
-<!-- Photo gallery is only included when exporting. -->
-<!-- PhotoSwipe gallery -->
-
-<link rel="stylesheet" href="Resources/PhotoSwipe/photoswipe.css">
-<link rel="stylesheet" href="Resources/PhotoSwipe/default-skin/default-skin.css">
-<script src="Resources/PhotoSwipe/photoswipe.min.js"></script>
-<script src="Resources/PhotoSwipe/photoswipe-ui-default.min.js"></script>
-
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="pswp__bg"></div>
-    <div class="pswp__scroll-wrap">
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-        <div class="pswp__ui pswp__ui--hidden">
-            <div class="pswp__top-bar">
-                <div class="pswp__counter"></div>
-                <button class="pswp__button pswp__button--close" title="Cerrar"></button>
-            </div>
-            <button class="pswp__button pswp__button--arrow--left" title="Anterior">
-            </button>
-            <button class="pswp__button pswp__button--arrow--right" title="Siguiente">
-            </button>
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script type="text/javascript">
-    var openPhotoSwipe = function(event) {
-        var pswp = document.querySelector('.pswp');
-        
-        var element = event.target;
-        var src = element.getAttribute('src');
-        
-        // build items array
-        var items = [
-            {
-                msrc: 'Images/036A5BC8-6AB2-44A4-8ACB-D47E4370CBC9/E387DE92-95B1-4808-B1EE-86EE2AA47EB6.jpg',
-                src: 'Images/036A5BC8-6AB2-44A4-8ACB-D47E4370CBC9/E387DE92-95B1-4808-B1EE-86EE2AA47EB6.jpg',
-                w: 945,
-                h: 865,
-                title: '2'
-            },
-        ];
-        
-        var index = 0;
-        for (var i=0; i<items.length; i++) {
-            var item = items[i];
-            if (item.src == src) {
-                index = i;
-            }
-        }
-                         
-        var options = {
-            index: index,
-            history: false,
-            focus: true,
-            captionEl: true,
-            fullscreenEl: false,
-            zoomEl: false,
-            shareEl: false,
-            preloaderEl: false,
-            bgOpacity: 0.9,
-            showHideOpacity: true
-        };
-                             
-        var gallery = new PhotoSwipe(pswp, PhotoSwipeUI_Default, items, options);
-        gallery.init();
-    };
-
-    var elements = document.querySelectorAll('.photoswipe');
-    for (var i=0; i<elements.length; i++) {
-        var element = elements[i];
-        element.addEventListener('click', openPhotoSwipe);
-    }
-</script>
 
 
     </body>

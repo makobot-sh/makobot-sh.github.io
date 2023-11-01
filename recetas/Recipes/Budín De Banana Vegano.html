@@ -104,6 +104,11 @@
     <div class="infobox">
 
         <!-- Image -->
+        <div class="photobox">
+            <a href="#">
+                <img src="Images/75000C79-75CB-42C3-A67C-11C26C890032/E1B42854-9DAB-4B6C-91A2-AE6D027B06BA.jpg" itemprop="image" class="photo photoswipe"/>
+            </a>
+                    </div>
 
         <!-- Name -->
         <h1 itemprop="name" class="name">Bud&#237;n De Banana Vegano</h1>
@@ -112,6 +117,7 @@
         
         <!-- Rating, categories -->
         <p itemprop="aggregateRating" class="rating" value="5">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            <p itemprop="recipeCategory" class="categories">Macl&#225;sicos</p>
         
         <p class="metadata">
         
@@ -128,6 +134,12 @@
     <div class="left-column">
 
         <!-- Ingredients -->
+        <div class="ingredientsbox">
+            <h3 class="subhead">Ingredientes</h3>
+            <div class="ingredients text">
+                <p class="line" itemprop="recipeIngredient">- Como es vegana, en vez de 2 huevos procesas lino (2 cuchardas) y les cubris de agua y las dejas en la heladera 15&apos;. Se pone al final!!</p><p class="line" itemprop="recipeIngredient">- 3 tazas(400g) de harina leudante (o 0000 en su defecto, con 3% del peso de la harina, azucar y banana sumados de royal. O si te da fiaca hacer esa cuenta, una cucharada de royal debería bastar). </p><p class="line" itemprop="recipeIngredient">- 1/2 taza de azucar rubia (130g)</p><p class="line" itemprop="recipeIngredient">- Canela</p><p class="line" itemprop="recipeIngredient">- (opc) 1 cdta de sal</p><p class="line" itemprop="recipeIngredient">- 1 pocillo (de cafe) de aceite</p><p class="line" itemprop="recipeIngredient">- 3 bananas pisadas (4 bananas grandes pesan 900g)/2 mandarinas</p><p class="line" itemprop="recipeIngredient">- También le queda rica una manzana hecha puré (con el microondas) y/o un poco de jugo de naranja. Lo que tengas (poné menos banana para compensar)</p>
+            </div>
+        </div>
         
         <!-- Nutrition (in two-column mode it goes below the ingredients) -->
 
@@ -141,7 +153,7 @@
     <div class="directionsbox">
         <h3 class="subhead">Instrucciones</h3>
         <div itemprop="recipeInstructions" class="directions text">
-            <p class="line"><strong>Budin de banana vegano:</strong><br/>-como es vegana, en vez de 2 huevos procesas lino (2 cuchardas) y les cubris de agua y las dejas en la heladera 15&apos;. Se pone al final!!<br/>-3 tazas(400g) de harina leudante (o 0000 en su defecto, con 3% del peso de la harina, azucar y banana sumados de royal). <br/>-1/2 taza de azucar (rubia) (130g)<br/>-Canela<br/>-1 cdta de sal<br/>- al menos 1 cda royal si no es leduante la harina (en verdad es peso harina + peso azucar + peso banana *3/100)<br/>-1 taza (de cafe) de aceite<br/>-3 bananas pisadas (4 bananas grandes pesan 900g)/2 mandarinas<br/>NO OLVIDAR AGREGAR EL LINO<br/>----------<br/>-Mezclar todo (banana y gel de lino ultimos)<br/>-30-45&apos; en horno medio]!!!</p><p class="line">A 200 grados c tomo</p>
+            <p class="line">- Moler el lino y ponerlo en la heladera. Debe quedar ahi unos 10 minutos (si queda más no pasa nada)<br/>- Agregar la harina (y royal si no es leudante), azúcar, canela, sal y mezclar<br/>- Agregar el aceite, fruta y gel de lino (que retiramos de la heladera en este momento<br/>- Cocinar 30-45&apos; en horno medio-alto (a 200 grados?)</p>
         </div>
     </div>
 
@@ -158,6 +170,87 @@
 
 </div>
 
+<!-- Photo gallery is only included when exporting. -->
+<!-- PhotoSwipe gallery -->
+
+<link rel="stylesheet" href="Resources/PhotoSwipe/photoswipe.css">
+<link rel="stylesheet" href="Resources/PhotoSwipe/default-skin/default-skin.css">
+<script src="Resources/PhotoSwipe/photoswipe.min.js"></script>
+<script src="Resources/PhotoSwipe/photoswipe-ui-default.min.js"></script>
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Cerrar"></button>
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Anterior">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Siguiente">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var openPhotoSwipe = function(event) {
+        var pswp = document.querySelector('.pswp');
+        
+        var element = event.target;
+        var src = element.getAttribute('src');
+        
+        // build items array
+        var items = [
+            {
+                msrc: 'Images/75000C79-75CB-42C3-A67C-11C26C890032/1DB611CC-F879-42F5-A567-369E5C860334.jpg',
+                src: 'Images/75000C79-75CB-42C3-A67C-11C26C890032/1DB611CC-F879-42F5-A567-369E5C860334.jpg',
+                w: 1024,
+                h: 683,
+                title: '1'
+            },
+        ];
+        
+        var index = 0;
+        for (var i=0; i<items.length; i++) {
+            var item = items[i];
+            if (item.src == src) {
+                index = i;
+            }
+        }
+                         
+        var options = {
+            index: index,
+            history: false,
+            focus: true,
+            captionEl: true,
+            fullscreenEl: false,
+            zoomEl: false,
+            shareEl: false,
+            preloaderEl: false,
+            bgOpacity: 0.9,
+            showHideOpacity: true
+        };
+                             
+        var gallery = new PhotoSwipe(pswp, PhotoSwipeUI_Default, items, options);
+        gallery.init();
+    };
+
+    var elements = document.querySelectorAll('.photoswipe');
+    for (var i=0; i<elements.length; i++) {
+        var element = elements[i];
+        element.addEventListener('click', openPhotoSwipe);
+    }
+</script>
 
 
     </body>
