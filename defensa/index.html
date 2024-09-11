@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Defensa de Tesis - Macarena 🎉</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+	  font-size: 20px;
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    .countdown-container {
+      margin-top: -10px;
+    }
+    .countdown {
+      font-size: 2em;
+      padding: 20px;
+      background-color: #e0f7fa;
+      border-radius: 15px;
+      display: inline-block;
+    }
+    .youtube-link {
+	margin-top: -10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .youtube-link img {
+      width: 30px;
+      height: auto;
+      margin-right: 10px;
+    }
+    .maps-link {
+      font-size: 0.9em;
+      text-decoration: none;
+      color: #007BFF;
+    }
+    .maps-link:hover {
+      text-decoration: underline;
+    }
+    .calendar-link {
+	  display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .calendar-link img {
+      width: 25px;
+      height: auto;
+	  margin-right: 10px;
+    }
+	.calendar-container {
+		margin-top: 20px;
+	}
+  </style>
+</head>
+<body>
+
+  <h1>Defensa de Tesis - Macarena 🎉</h1>
+  <p>Fecha: 20 de septiembre 2024, 14:00 horas</p>
+  <p>Lugar: Sala 1604 - Pabellón 0+inf, Ciudad Universitaria 
+    <a class="maps-link" href="https://maps.app.goo.gl/87qTssG37chzYf8j6" target="_blank">
+      <span>📍 Maps</span>
+    </a>
+  </p>
+
+  <div class="youtube-link">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube Logo">
+    <p>Stream en vivo: link a definir</p>
+  </div>
+
+  <div class="countdown-container">
+    <p>Cuenta regresiva hasta la defensa:</p>
+    <div class="countdown">
+      <div id="timer"></div>
+    </div>
+  </div>
+  
+  <iframe class="calendar-container" src="https://calendar.google.com/calendar/embed?height=400&wkst=1&ctz=America%2FArgentina%2FBuenos_Aires&bgcolor=%23ffffff&mode=WEEK&title&showPrint=0&showCalendars=0&src=M2Y0MzQ2NGZjNWFlOTM0MzQ5M2Y3Mzc1MmI1ZjY0YzkzOGIyYWMxMjZhNzg3ZWM1ZjQzNzIxZTBmMTJhNDJjZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%233F51B5" style="border:solid 1px #777" width="600" height="400" frameborder="0" scrolling="no"></iframe>
+
+  <script>
+    // Set the date and time of the thesis defense in GMT-3
+    const thesisDate = new Date("September 20, 2024 14:00:00 GMT-0300").getTime();
+
+    // Update the countdown every second for better responsiveness
+    const interval = setInterval(function() {
+      // Get the current date and time
+      const now = new Date().getTime();
+
+      // Calculate the difference between now and the thesis date
+      const distance = thesisDate - now;
+
+      // Time calculations for days, hours, and minutes
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+      // Display the result in the element with id="timer"
+      document.getElementById("timer").innerHTML = days + " días " + hours + " horas " + minutes + " minutos ";
+
+      // If the countdown is finished, display some message
+      if (distance < 0) {
+        clearInterval(interval);
+        document.getElementById("timer").innerHTML = "¡Es hora de la defensa!";
+      }
+    }, 1000); // Update every second
+  </script>
+
+</body>
+</html>
