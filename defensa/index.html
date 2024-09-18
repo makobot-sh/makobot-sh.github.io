@@ -26,7 +26,8 @@
       display: inline-block;
     }
     .youtube-link {
-	margin-top: -10px;
+	    margin-top: -20px;
+      margin-bottom: -20px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -45,7 +46,7 @@
       text-decoration: underline;
     }
     .calendar-link {
-	  display: flex;
+	    display: flex;
       justify-content: center;
       align-items: center;
     }
@@ -84,21 +85,116 @@
         max-width: 600px; /* Adjust width for larger screens */
       }
     }
+
+    .collapsible-container {
+      padding: 1px;
+      max-width: 600px; /* Adjust this width to match your layout */
+      margin: 0 auto; /* Center the container */
+    }
+
+    .collapsible {
+      background-color: #f9f9f9;
+      color: #333;
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .collapsible:before {
+      content: '\25B6'; /* Right arrow */
+      font-size: 0.8em;
+      margin-right: 10px; /* Space between arrow and text */
+      transition: transform 0.3s;
+    }
+
+    .active:before {
+      transform: rotate(90deg); /* Down arrow */
+    }
+
+    .content {
+      padding: 0 15px;
+      text-indent: 20px;
+      text-align: justify;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      background-color: #f1f1f1;
+      margin-bottom: 10px;
+    }
   </style>
 </head>
 <body>
 
   <h1>Defensa de Tesis - Macarena 🎉</h1>
   <p>Fecha: 20 de septiembre 2024, 14:00 horas</p>
-  <p>Lugar: Sala 1604 - Pabellón 0+inf, Ciudad Universitaria 
-    <a class="maps-link" href="https://maps.app.goo.gl/87qTssG37chzYf8j6" target="_blank">
-      <span>📍 Maps</span>
-    </a>
-  </p>
 
   <div class="youtube-link">
     <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube Logo">
     <a class="maps-link" href="https://youtube.com/live/uStWzVa2sbw?feature=share" target="_blank"><p>Link a transmisión en vivo</p></a>
+  </div>
+
+  <p>Lugar: Sala 1604 - Pabellón 0+inf, Ciudad Universitaria
+    <a class="maps-link" href="https://maps.app.goo.gl/7hyr4DBKqQb3TSmp8" target="_blank">
+      <span>📍 Pin de maps.</span>
+    </a>
+    Cómo llegar:
+  </p>
+  <div class="collapsible-container">
+    <button class="collapsible">Mapa del pabellón 0+inf</button>
+    <div class="content">
+      <img src="plano.png" alt="Mapa del Pabellón 0+inf" style="max-width: 100%; height: auto;">
+    </div>
+    <button class="collapsible">A Ciudad en colectivo/tren</button>
+    <div class="content">
+      <p>Tomar cualquier colectivo que vaya a Ciudad Universitaria.
+        Ciudad tiene dos entradas, el colecivo va a entrar por la primer entrada saliendo del <a class="maps-link" href="https://maps.app.goo.gl/Tr31zDiSNwcxnz69Apuente" target="_blank">puente Scalabrini Ortiz</a>.
+        Tocar el timbre cuando el colectivo este saliendo del puente y bajarse <strong>apenas el colectivo entra a Ciudad.</strong>
+      </p>
+      <p>
+        Atrás del portón de entrada a Ciudad/garita de seguridad debería haber un camino de cemento que lleve al <a class="maps-link" href="https://maps.app.goo.gl/evppUuT4HzSYWxhR8" target="_blank">Pabellón 1</a> (el único que se ve desde acá).
+        Ir por ese camino y entrar al Pabellón 1. 
+      </p>
+      <p>  
+        Una vez dentro del pabellón 1 ir derecho, subir por la escalerita frente a la entrada, seguir hasta toparse con la rampa para silla de ruedas y ahí ir a la derecha y adelante hasta entrar al pasillo semiabierto que es el pabellón 0+inf.
+        De ahí ir a la sala 1604 siguiendo las instrucciones para llegar a la sala 1604.
+      </p>
+    </div>
+  
+    <button class="collapsible">A Ciudad en auto</button>
+    <div class="content">
+      <p>
+        Para llegar a Ciudad es necesario entrar por el <a class="maps-link" href="https://maps.app.goo.gl/Tr31zDiSNwcxnz69Apuente" target="_blank">puente Scalabrini Ortiz</a>.
+        Ciudad tiene dos entradas, los autos deben entrar por la segunda - ignorar la primer entrada a la izquierda apenas salir del puente, y seguir por la calle como si fueramos a Costanera.
+      </p>
+      <p>
+        Yendo hacia costanera va a aparecer una rotonda pequeña a la izquierda - tomar esta rotonda para llegar a la segunda entrada de Ciudad, la "entrada por atrás".
+        Pasando la entrada vamos a estar en una callecita, pronto va a aparecer un callejón a la izquierda que vamos a tomar para entrar al <a class="maps-link" href="https://maps.app.goo.gl/nnJbnxPxvexegU9s9" target="_blank">estacionamiento de los pabellones 0 y 1</a>.
+        Estacionar ahí y entrar por la entrada principal del Pabellón 1.
+      </p>
+      <p>  
+        Una vez dentro del pabellón 1 ir derecho, subir por la escalerita frente a la entrada, seguir hasta toparse con la rampa para silla de ruedas y ahí ir a la derecha y adelante hasta entrar al pasillo semiabierto que es el pabellón 0+inf.
+        De ahí ir a la sala 1604 siguiendo las instrucciones para llegar a la sala 1604.
+      </p>
+      <p>
+        Si no hay lugar en este estacionamiento, se puede salir por el mismo lugar donde entramos al estacionamiento y seguir por la callecita por la que entramos a Ciudad para llegar al <a class="maps-link" href="https://maps.app.goo.gl/vk9si4mmqSE8eK6q6" target="_blank">estacionamiento del pabellón 2</a> - es donde se ve una garita de seguridad frente a uno de los pabellones más grandes.
+      </p>
+    </div>
+
+    <button class="collapsible">A Ciudad en tren</button>
+    <div class="content">
+      <p>El tren te deja frente los pabellones 2 (ciencias naturales) y 3 (FADU). 
+        Caminar hacia el pabellón 0+inf, que es el edificio con paredes de vidrio que vas a ver a tu derecha al salir del tren.
+        Si no lo ves, caminá hacia el pabellón 2 (de los dos pabellones grandes frente a la salida de tren, el de la derecha - el que está más cerca a la entrada por auto/colectivo de Ciudad Universitaria).
+        Podés usar el pin de google maps para guiarte.
+      </p>
+    </div>
   </div>
 
   <div class="countdown-container">
@@ -135,9 +231,22 @@
       // If the countdown is finished, display some message
       if (distance < 0) {
         clearInterval(interval);
-        document.getElementById("timer").innerHTML = "¡Es hora de la defensa!";
+        document.getElementById("timer").innerHTML = 0 + " días " + 0 + " horas " + 0 + " minutos ";
       }
-    }, 1000); // Update every second
+      }, 1000); // Update every second
+
+    const coll = document.querySelectorAll(".collapsible");
+    coll.forEach(button => {
+    button.addEventListener("click", function() {
+      this.classList.toggle("active");
+      const content = this.nextElementSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  });
   </script>
 
 </body>
